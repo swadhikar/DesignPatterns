@@ -1,4 +1,4 @@
-from observer_pattern.basic.observable import IObservable, IObserver
+from observer_pattern.abstracts import IObservable, IObserver
 
 
 class Observable(IObservable):
