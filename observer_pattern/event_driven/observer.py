@@ -16,9 +16,10 @@ class Publisher:
         cls.SUBSCRIBERS[event].discard(observer)
         print(f'{observer} unsubscribed from "{event}" event')
 
-    def notify_subscribers(self, event, message):
+    @classmethod
+    def notify_subscribers(cls, event, message):
         """Notifies the subscribers with message"""
-        for subscriber in self.SUBSCRIBERS[event]:
+        for subscriber in cls.SUBSCRIBERS[event]:
             subscriber.notify(message)
 
 
